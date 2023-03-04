@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img id="golfer" src="https://www.real-world-physics-problems.com/images/physics_golf_swing_1.png">
+        <h1 id="title">Round Tracker</h1>
+        <img id="hole" src="https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190419110907-valentino-dixon-art-golf-masters-augusta-12th-hole.jpg">
+    </header>
+
+    <main>
+        <form>
+            <input
+                type="text"
+                id="location"
+                placeholder="Where did you play you last round?"/>
+            <input
+                type="text"
+                id="holes"
+                placeholder="How many holes did you play?"/>
+            <input
+                type="text"
+                id="score"
+                placeholder="What did you shoot?"/>
+            <section id="golf-ratings">
+                <p>Rate the Golf Course</p>
+                <div id="golf-radio">
+                    <label for="one">
+                        <input
+                            type="radio"
+                            name="ratings"
+                            value="1"
+                            id="one"/>
+                        1
+                    </label>
+                    <label for="two">
+                        <input
+                            type="radio"
+                            name="ratings"
+                            value="2"
+                            id="two"/>
+                        2
+                    </label>
+                    <label for="three">
+                        <input
+                            type="radio"
+                            name="ratings"
+                            value="3"
+                            id="three"/>
+                        3
+                    </label>
+                    <label for="four">
+                        <input
+                            type="radio"
+                            name="ratings"
+                            value="4"
+                            id="four"/>
+                        4
+                    </label>
+                    <label for="five">
+                        <input
+                            type="radio"
+                            name="ratings"
+                            value="5"
+                            id="five"/>
+                        5
+                    </label>
+                </div>
+            </section>
+            <button id="submitBtn">Submit Round</button>
+        </form>
+        <section id="round-container"></section>
+    </main>
+
+    <footer>
+        <section class="enter-email">
+            <div></div>
+        </section>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
