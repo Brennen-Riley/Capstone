@@ -1,9 +1,4 @@
-const rounds = [{
-    location: "Salt Lake",
-    holes: 18,
-    score: 72,
-    rating: 5
-}]
+const rounds = []
 
 let nextAvailableID = rounds.length = 1;
 

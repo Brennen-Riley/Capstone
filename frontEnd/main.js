@@ -7,8 +7,8 @@ const errCallback = err => console.log(err.response.data)
 
 const getAllRounds = () => axios.get(baseURL).then(roundCallback).catch(errCallback)
 const createRound = body => axios.post(baseURL, body).then(roundCallback).catch(errCallback)
-// const deleteRound = id => axios.delete(`${baseURL}/${id}`).then(roundCallback).catch(errCallback)
-// const updateRating = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(roundCallback).catch(errCallback)
+const deleteRound = id => axios.delete(`${baseURL}/${id}`).then(roundCallback).catch(errCallback)
+const updateRating = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(roundCallback).catch(errCallback)
 
 function submitHandler(e) {
     e.preventDefault()

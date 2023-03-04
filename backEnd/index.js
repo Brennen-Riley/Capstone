@@ -12,5 +12,7 @@ app.use(express.static(path.resolve(__dirname, "../frontEnd")))
 
 app.post("/api/rounds", golfController.createRound);
 app.get("/api/rounds", golfController.getAllRounds);
+app.delete("/api/round:id", golfController.deleteRound);
+app.put("/api/rounds:id", golfController.updateRating);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}.`))
