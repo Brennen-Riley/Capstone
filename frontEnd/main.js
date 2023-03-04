@@ -2,13 +2,16 @@ const roundContainer = document.querySelector("#round-container")
 const form = document.querySelector('form')
 
 const baseURL = `http://localhost:3000/api/rounds`
-const roundCallback = ({ data: rounds }) => displayRounds(rounds)
+async function roundCallback(data) {
+    displayRounds(data.data)
+    console.log(data.data);
+}
 const errCallback = err => console.log(err.response.data)
 
 const getAllRounds = () => axios.get(baseURL).then(roundCallback).catch(errCallback)
 const createRound = body => axios.post(baseURL, body).then(roundCallback).catch(errCallback)
 const deleteRound = id => axios.delete(`${baseURL}/${id}`).then(roundCallback).catch(errCallback)
-const updateRating = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(roundCallback).catch(errCallback)
+// const updateRating = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(roundCallback).catch(errCallback)
 
 function submitHandler(e) {
     e.preventDefault()
@@ -31,6 +34,9 @@ function submitHandler(e) {
 }
 
 function createRoundCard(round) {
+    if(!round){
+        return 
+    }
     const roundCard = document.createElement('div')
     roundCard.classList.add('round-card')
 
