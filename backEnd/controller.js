@@ -1,19 +1,27 @@
-const rounds = []
+const rounds = [{
+    location: "Salt Lake",
+    holes: 18,
+    score: 72,
+    rating: 5
+}]
 
 let nextAvailableID = rounds.length = 1;
 
 module.exports = {
+    getAllRounds(req, res) {
+        res.status(200).send(rounds)
+    },
     createRound(req, res) {
-        const { where, holes, shoot, rating } = req.body
+        const { location, holes, score, rating } = req.body
 
-        if (!where || !holes || !shoot || !rating){
+        if (!location || !holes || !score || !rating){
             return res.status(400).send("Invalid request.")
         }
 
         const newRound = {
-            where,
+            location,
             holes,
-            shoot,
+            score,
             rating
         }
         rounds.push(newRound)

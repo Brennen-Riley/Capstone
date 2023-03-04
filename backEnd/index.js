@@ -11,5 +11,6 @@ app.use(express.json())
 app.use(express.static(path.resolve(__dirname, "../frontEnd")))
 
 app.post("/api/rounds", golfController.createRound);
+app.get("/api/rounds", golfController.getAllRounds);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}.`))
