@@ -1,4 +1,4 @@
-let rounds = require('./db.json');
+const rounds = []
 
 let nextAvailableID = rounds.length = 1;
 
