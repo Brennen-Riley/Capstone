@@ -63,3 +63,17 @@ function displayRounds (arr) {
 form.addEventListener('submit', submitHandler)
 
 getAllRounds()
+
+const signUPBtn = document.querySelector("#sign-up");
+const input = document.querySelector("input");
+const signUpForm = document.querySelector(".enter-email");
+const footer = document.querySelector("footer");
+
+function emailSubmitHandle(){
+    const message = document.createElement("p")
+    message.textContent = "Thank you for signing up! " + input.value
+    signUpForm.remove()
+    footer.appendChild(message)
+}
+
+signUPBtn.addEventListener("click", emailSubmitHandle)
