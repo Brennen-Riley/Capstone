@@ -11,7 +11,7 @@ const errCallback = err => console.log(err.response.data)
 const getAllRounds = () => axios.get(baseURL).then(roundCallback).catch(errCallback)
 const createRound = body => axios.post(baseURL, body).then(roundCallback).catch(errCallback)
 const deleteRound = id => axios.delete(`${baseURL}/${id}`).then(roundCallback).catch(errCallback)
-// const updateRating = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(roundCallback).catch(errCallback)
+const updateRating = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(roundCallback).catch(errCallback)
 
 function submitHandler(e) {
     e.preventDefault()
@@ -40,7 +40,8 @@ function createRoundCard(round) {
     const roundCard = document.createElement('div')
     roundCard.classList.add('round-card')
 
-    roundCard.innerHTML = `<p class="round-location">${round.location}</p>
+    roundCard.innerHTML = `
+    <p class="round-location">${round.location}</p>
     <div class="btns-container">
         <button onclick="updateRound(${round.id}, 'minus')">-</button>
         <p class="round-rating">${round.rating} stars</p>
