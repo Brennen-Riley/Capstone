@@ -16,7 +16,7 @@ header {
     align-items: center;
     background-color: rgb(65, 155, 65);
     color: #f7f2c3;
-    border-bottom: 2px solid #f7f2c3;
+    border-bottom: 2px solid black;
 }
 
 #golfer {
@@ -64,7 +64,7 @@ input[type='text'] {
 }
 
 #submitBtn {
-    background-color: green;
+    background-color: rgb(65, 155, 65);
     color: #f7f2c3;
     width: 75px;
     height: 40px;
@@ -89,4 +89,25 @@ input[type='text'] {
 #location {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
+}
+
+.round-card {
+    background-color: rgb(65, 155, 65);
+    width: 15vw;
+    height: 15vh;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 12px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.btns-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px;
 }

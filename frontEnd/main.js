@@ -40,11 +40,13 @@ function createRoundCard(round) {
 
     roundCard.innerHTML = `
     <p class="round-location">${round.location}</p>
+    <p class="num-holes">Played: ${round.holes} Holes</p>
+    <p class="round-score">Shot: ${round.score}</p>
     <div class="btns-container">
         <button onclick="updateRating(${round.id}, 'minus')">-</button>
         <p class="round-rating">${round.rating} stars</p>
         <button onclick="updateRating(${round.id}, 'plus')">+</button>
-    </div>
+        </div>
     <button onclick="deleteRound(${round.id})">delete</button>
     `
 
