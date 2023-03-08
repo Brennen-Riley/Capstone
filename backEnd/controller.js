@@ -41,7 +41,7 @@ module.exports = {
                 if(type === 'minus') {
                     const newRating = round.rating - 1
 
-                    if(newRating > 0) {
+                    if(newRating >= 0) {
                         round.rating = newRating
                     }
                 } else if(type === 'plus') {
