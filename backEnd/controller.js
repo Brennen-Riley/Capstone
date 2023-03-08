@@ -1,6 +1,5 @@
 let rounds = []
-
-let nextAvailableID = rounds.length = 1;
+let globalId = 0
 
 module.exports = {
     getAllRounds(req, res) {
@@ -13,20 +12,19 @@ module.exports = {
             return res.status(400).send("Invalid request.")
         }
 
-        const newRound = {
-            id: nextAvailableID,
+        let newRound = {
+            id: globalId,
             location,
             holes,
             score,
             rating
         }
         rounds.push(newRound)
-        nextAvailableID += 1
         res.status(200).send(rounds)
+        globalId++
     },
     deleteRound(req, res) {
         const { id } = req.params;
-        console.log(id);
         rounds = rounds.filter((round) => round.id !== parseInt(id, 10));
         res.status(200).send(rounds);
     },
