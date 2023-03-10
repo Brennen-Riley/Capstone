@@ -45,7 +45,6 @@ form {
     width: 25%;
     height: 25%;
     background-color: #f7f2c3;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -107,6 +106,14 @@ form {
     border-top-right-radius: 15px;
 }
 
+#round-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 0px;
+}
+
 .btns-container {
     width: 100%;
     display: flex;
@@ -138,7 +145,6 @@ footer {
 
 .enter-email {
     display: flex;
-    justify-content: space-betwe;
     align-items: center;
     width: 100%;
     margin: 20px;
