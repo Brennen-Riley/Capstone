@@ -17,17 +17,20 @@ function submitHandler(e) {
     let location = document.querySelector('#location')
     let holes = document.querySelector('#holes')
     let score = document.querySelector('#score')
+    let date = document.querySelector('#date')
     let rating = document.querySelector('input[name="ratings"]:checked')
     let bodyObj = {
         location: location.value,
         holes: holes.value,
         score: score.value,
+        date: date.value,
         rating: rating.value
     }
     createRound(bodyObj)
     location.value = ''
     holes.value = ''
     score.value = ''
+    date.value = ''
     rating.checked = false 
 }
 
@@ -42,6 +45,7 @@ function createRoundCard(round) {
     <p class="round-location">${round.location}</p>
     <p class="num-holes">Played: ${round.holes} Holes</p>
     <p class="round-score">Shot: ${round.score}</p>
+    <p class="round-date">Date: ${round.date}</p>
     <div class="btns-container">
         <button onclick="updateRating(${round.id}, 'minus')">-</button>
         <p class="round-rating">${round.rating} stars</p>

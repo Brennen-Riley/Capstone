@@ -6,9 +6,9 @@ module.exports = {
         res.status(200).send(rounds)
     },
     createRound(req, res) {
-        const { location, holes, score, rating } = req.body
+        const { location, holes, score, date, rating } = req.body
 
-        if (!location || !holes || !score || !rating){
+        if (!location || !holes || !score || !date || !rating){
             return res.status(400).send("Invalid request.")
         }
 
@@ -17,6 +17,7 @@ module.exports = {
             location,
             holes,
             score,
+            date,
             rating
         }
         rounds.push(newRound)
