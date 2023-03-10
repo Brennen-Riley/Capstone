@@ -6,7 +6,8 @@
 
 body {
     background-color: white;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
 }
 
 header {
@@ -37,6 +38,7 @@ main {
     margin: 15px;
     display: flex;
     justify-content: flex-start;
+    min-height: calc(85vh - 75px);
 }
 
 form {
@@ -54,7 +56,7 @@ form {
 }
 
 
-input[type='text'] {
+.main-input {
     width:100%;
     height: 30px;
     border: none;
@@ -110,4 +112,43 @@ input[type='text'] {
     display: flex;
     justify-content: space-evenly;
     margin: 5px;
+}
+
+footer {
+    background-color: rgb(65, 155, 65);
+    display: flex;
+    color: #f7f2c3;
+    position: sticky;
+    bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    height: 50px;
+    border-top: 2px solid #f7f2c3;
+}
+
+#news {
+    margin-right: 20px;
+}
+
+#footer-input {
+    width: 200px;
+    border-radius: 7px;
+}
+
+.enter-email {
+    display: flex;
+    justify-content: space-betwe;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+}
+
+#sign-up {
+    background-color: #f7f2c3;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 10px 10px;
+    margin: 10px;
 }
